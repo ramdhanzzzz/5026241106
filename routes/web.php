@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\PensilDBController;
 
 // Route bawaan Laravel (halaman welcome)
 Route::get('/', function () {
@@ -67,3 +68,12 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+//crud pensil
+Route::get('/pensil', [PensilDBController::class, 'index']);
+Route::get('/pensil/tambah', [PensilDBController::class, 'tambah']);
+Route::post('/pensil/store', [PensilDBController::class, 'store']);
+Route::get('/pensil/edit/{id}', [PensilDBController::class, 'edit']);
+Route::post('/pensil/update', [PensilDBController::class, 'update']);
+Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
+Route::get('/pensil/cari', [PensilDBController::class, 'cari']);
