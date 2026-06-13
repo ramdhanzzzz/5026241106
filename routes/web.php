@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\PensilDBController;
+use App\Http\Controllers\SiswaDBController;
+use App\Http\Controllers\KeranjangbelanjaDBController;
+use App\Http\Controllers\NilaiKuliahDBController;
 
 // Route bawaan Laravel (halaman welcome)
 Route::get('/', function () {
@@ -77,3 +80,24 @@ Route::get('/pensil/edit/{id}', [PensilDBController::class, 'edit']);
 Route::post('/pensil/update', [PensilDBController::class, 'update']);
 Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
 Route::get('/pensil/cari', [PensilDBController::class, 'cari']);
+
+//route CRUD siswa
+Route::get('/siswa', [SiswaDBController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaDBController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaDBController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaDBController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaDBController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaDBController::class, 'destroy'])->name('siswa.destroy');
+
+
+// CRUD Keranjang Belanja
+Route::get('/keranjangbelanja', [KeranjangbelanjaDBController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/tambah', [KeranjangbelanjaDBController::class, 'tambah'])->name('keranjangbelanja.tambah');
+Route::post('/keranjangbelanja/store', [KeranjangbelanjaDBController::class, 'store'])->name('keranjangbelanja.store');
+Route::get('/keranjangbelanja/hapus/{id}', [KeranjangbelanjaDBController::class, 'hapus'])->name('keranjangbelanja.hapus');
+
+// CRUD Nilai Kuliah
+Route::get('/nilaikuliah', [NilaiKuliahDBController::class, 'index'])->name('nilaikuliah.index');
+Route::get('/nilaikuliah/tambah', [NilaiKuliahDBController::class, 'tambah'])->name('nilaikuliah.tambah');
+Route::post('/nilaikuliah/store', [NilaiKuliahDBController::class, 'store'])->name('nilaikuliah.store');
+Route::get('/nilaikuliah/hapus/{id}', [NilaiKuliahDBController::class, 'hapus'])->name('nilaikuliah.hapus');

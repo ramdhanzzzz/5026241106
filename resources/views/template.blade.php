@@ -31,13 +31,13 @@
                         <a class="nav-link {{ request()->is('pensil*') ? 'active' : '' }}" href="/pensil">Pensil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('siswa*') ? 'active' : '' }}" href="#">Siswa</a>
+                        <a class="nav-link {{ request()->is('siswa*') ? 'active' : '' }}" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Latihan 1</a>
+                        <a class="nav-link {{ request()->is('keranjangbelanja*') ? 'active' : '' }}" href="/keranjangbelanja">Latihan Laki</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Latihan 2</a>
+                        <a class="nav-link {{ request()->is('nilaikuliah*') ? 'active' : '' }}" href="/nilaikuliah">Latihan Perempuan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>
