@@ -109,4 +109,3 @@ route::get('/nilaikuliah/cari', [NilaiKuliahDBController::class, 'cari'])->name(
 Route::get('/buku', [BukuDBController::class, 'index'])->name('buku.index');
 Route::get('/buku/cari', [BukuDBController::class, 'cari'])->name('buku.cari');
 Route::get('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku.pinjam');
-Route::post('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku.pinjam');

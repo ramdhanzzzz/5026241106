@@ -21,17 +21,10 @@ class bukuDBController extends Controller{
 
         return view('buku.index', ['buku' => $buku]);
     }
-    public function pinjam($ID)
+public function pinjam($ID)
     {
-        $buku = DB::table('buku')->where('ID', $ID)->first();
-
-        if ($buku) {
-            DB::table('buku')->where('ID', $ID)->update(['sedang_dipinjam' => 1]);
-            return redirect()->route('buku.index')->with('success', 'Buku berhasil dipinjam.');
-        } else {
-            return redirect()->route('buku.index')->with('error', 'Buku tidak ditemukan.');
-        }
+        DB::table('buku')->where('ID', $ID)->update(['sedang_dipinjam' => 1]);
+        return redirect()->route('buku.index');
     }
-
 }
 

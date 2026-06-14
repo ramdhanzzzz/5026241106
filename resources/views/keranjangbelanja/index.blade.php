@@ -7,7 +7,7 @@
 <p> Cari Data Keranjang Belanja</p>
 <form action="{{ route('keranjangbelanja.cari') }}" method="GET">
     <input type="text" name="cari" placeholder="Cari Kode Barang..." class="form-control">
-    <input type="submit" value="CARI" class="btn btn-success">
+    <input type="submit" value="CARI" class="btn btn-success"> 
 </form>
     <table class="table table-bordered table-striped table-hover mt-4">
         <thead class="thead-light">
