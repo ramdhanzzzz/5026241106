@@ -102,5 +102,4 @@ Route::get('/keranjangbelanja/cari', [KeranjangbelanjaDBController::class, 'cari
 Route::get('/nilaikuliah', [NilaiKuliahDBController::class, 'index'])->name('nilaikuliah.index');
 Route::get('/nilaikuliah/tambah', [NilaiKuliahDBController::class, 'tambah'])->name('nilaikuliah.tambah');
 Route::post('/nilaikuliah/store', [NilaiKuliahDBController::class, 'store'])->name('nilaikuliah.store');
-Route::get('/nilaikuliah/hapus/{id}', [NilaiKuliahDBController::class, 'hapus'])->name('nilaikuliah.hapus');
 route::get('/nilaikuliah/cari', [NilaiKuliahDBController::class, 'cari'])->name('nilaikuliah.cari');
