@@ -37,4 +37,14 @@ class KeranjangbelanjaDBController extends Controller
 
         return redirect()->route('keranjangbelanja.index');
     }
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $keranjangbelanja = DB::table('keranjangbelanja')
+            ->where('KodeBarang', 'like', '%' . $cari . '%')
+            ->paginate();
+
+        return view('keranjangbelanja.index', ['keranjangbelanja' => $keranjangbelanja]);
+    }
 }

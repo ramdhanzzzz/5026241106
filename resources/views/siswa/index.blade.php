@@ -3,14 +3,15 @@
 @section('judul_halaman', 'Data Siswa')
 
 @section('konten')
-    @if (session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('success') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
+<p></p>
+<p>Cari Data Siswa :
+    <form action="{{ route('siswa.cari') }}" method="GET">
+    <input type="text" name="cari" placeholder="Cari NRP/Nama Siswa..." class="form-control">
+    <input type="submit" value="CARI" class="btn btn-success">
+</form>
+</p>
+
+<p></p>
 
     <a href="{{ route('siswa.create') }}" class="btn btn-primary mb-3">Tambah Siswa</a>
 

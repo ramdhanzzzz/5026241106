@@ -3,6 +3,13 @@
 @section('judul_halaman', 'Data Nilai Kuliah')
 
 @section('konten')
+<p></p>
+<p> Cari Data Nilai Kuliah :
+    <form action="{{ route('nilaikuliah.cari') }}" method="GET">
+    <input type="text" name="cari" placeholder="Cari NRP..." class="form-control">
+    <input type="submit" value="CARI" class="btn btn-success">
+</form>
+</p>
     <a href="/nilaikuliah/tambah" class="btn btn-primary mb-3">Tambah Data</a>
 
     <table class="table table-bordered table-striped table-hover">

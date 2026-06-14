@@ -30,4 +30,14 @@ class NilaiKuliahDBController extends Controller
 
         return redirect('/nilaikuliah');
     }
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $nilaikuliah = DB::table('nilaikuliah')
+            ->where('NRP', 'like', '%' . $cari . '%')
+            ->paginate();
+
+        return view('nilaikuliah.index', ['nilaikuliah' => $nilaikuliah]);
+    }
 }
