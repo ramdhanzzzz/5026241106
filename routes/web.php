@@ -6,6 +6,7 @@ use App\Http\Controllers\PensilDBController;
 use App\Http\Controllers\SiswaDBController;
 use App\Http\Controllers\KeranjangbelanjaDBController;
 use App\Http\Controllers\NilaiKuliahDBController;
+use App\Http\Controllers\BukuDBController;
 
 // Route bawaan Laravel (halaman welcome)
 Route::get('/', function () {
@@ -103,3 +104,9 @@ Route::get('/nilaikuliah', [NilaiKuliahDBController::class, 'index'])->name('nil
 Route::get('/nilaikuliah/tambah', [NilaiKuliahDBController::class, 'tambah'])->name('nilaikuliah.tambah');
 Route::post('/nilaikuliah/store', [NilaiKuliahDBController::class, 'store'])->name('nilaikuliah.store');
 route::get('/nilaikuliah/cari', [NilaiKuliahDBController::class, 'cari'])->name('nilaikuliah.cari');
+
+//crud buku
+Route::get('/buku', [BukuDBController::class, 'index'])->name('buku.index');
+Route::get('/buku/cari', [BukuDBController::class, 'cari'])->name('buku.cari');
+Route::get('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku.pinjam');
+Route::post('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku.pinjam');
