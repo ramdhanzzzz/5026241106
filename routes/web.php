@@ -113,6 +113,6 @@ Route::get('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku
 
 //crud my karyawan
 Route::get('/eas',[MykaryawanDBController::class, 'index'] )->name('mykaryawan.index');
-Route::get('/eas/view', [MykaryawanDBController::class, 'View'] )->name('mykaryawan.view');
+Route::get('/eas/view/{kode_pegawai}', [MykaryawanDBController::class, 'view'])->name('mykaryawan.view');
 
 

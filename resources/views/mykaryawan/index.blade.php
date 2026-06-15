@@ -21,7 +21,7 @@
             <td class="text-center align-middle">{{$mk -> divisi}}</td>
             <td class="text-center align-middle">{{$mk -> departemen}}</td>
             <td class="text-center align-middle">
-                <a href="{{ route('mykaryawan.view', $mk -> kode_pegawai) }}" class="btn btn-warning btn-sm">View</a>
+                <a href="{{ route('mykaryawan.view', $mk->kode_pegawai) }}" class="btn btn-primary btn-sm">View</a>
             </td>
         </tr>
     @endforeach

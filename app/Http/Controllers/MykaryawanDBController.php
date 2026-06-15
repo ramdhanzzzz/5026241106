@@ -14,6 +14,6 @@ class MykaryawanDBController extends Controller
     }
     public function view ($kode_pegawai){
         $mykaryawan = DB::table('mykaryawan')->where('kode_pegawai', $kode_pegawai)->first();
-             return view('mykaryawan.view', ['mykaryawan', $mykaryawan]);
+           return view('mykaryawan.view', ['mykaryawan' => $mykaryawan]);
     }
 }
