@@ -7,6 +7,7 @@ use App\Http\Controllers\SiswaDBController;
 use App\Http\Controllers\KeranjangbelanjaDBController;
 use App\Http\Controllers\NilaiKuliahDBController;
 use App\Http\Controllers\BukuDBController;
+use App\Http\Controllers\MykaryawanDBController;
 
 // Route bawaan Laravel (halaman welcome)
 Route::get('/', function () {
@@ -109,3 +110,9 @@ route::get('/nilaikuliah/cari', [NilaiKuliahDBController::class, 'cari'])->name(
 Route::get('/buku', [BukuDBController::class, 'index'])->name('buku.index');
 Route::get('/buku/cari', [BukuDBController::class, 'cari'])->name('buku.cari');
 Route::get('/buku/pinjam/{id}', [BukuDBController::class, 'pinjam'])->name('buku.pinjam');
+
+//crud my karyawan
+Route::get('/eas',[MykaryawanDBController::class, 'index'] )->name('mykaryawan.index');
+Route::get('/eas/view', [MykaryawanDBController::class, 'View'] )->name('mykaryawan.view');
+
+

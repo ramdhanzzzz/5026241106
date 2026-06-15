@@ -40,7 +40,7 @@
                         <a class="nav-link {{ request()->is('nilaikuliah*') ? 'active' : '' }}" href="/nilaikuliah">Latihan Perempuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link {{ request()->is('eas*') ? 'active' : ''}}" href="/eas">EAS</a>
                     </li>
                 </ul>
             </div>
